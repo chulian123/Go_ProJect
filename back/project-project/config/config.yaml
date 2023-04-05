@@ -1,0 +1,59 @@
+server:
+  name: "project-project"
+  addr: "127.0.0.1:8081"
+zap:
+  debugFileName: "D:\\go\\project\\ms_project\\logs\\debug\\menu-debug.log"
+  infoFileName: "D:\\go\\project\\ms_project\\logs\\info\\menu-info.log"
+  warnFileName: "D:\\go\\project\\ms_project\\logs\\error\\menu-error.log"
+  maxSize: 500,
+  maxAge: 28,
+  MaxBackups: 3
+redis:
+  host: "www.dzhxka.com"
+  port: 5600
+  Password: ""
+  DB: 0
+grpc:
+  etcdAddr: "127.0.0.1:8882"
+  addr: "127.0.0.1:8882"
+  name: "project"
+  version: "1.0.0"
+  weight: 2
+etcd:
+  addrs:
+    - "127.0.0.1:2379"
+mysql:
+  username: root
+  password: Chulianpzj12345
+  host: "www.dzhxka.com"
+  port: 5000
+  db: Myproject
+db:
+  separation: true
+  master:
+    name: master
+    username: root
+    password: Chulianpzj12345
+    host: "www.dzhxka.com"
+    port: 5000
+    db: Myproject
+  slave:
+    - username: root
+      password: Chulianpzj12345
+      host: "www.dzhxka.com"
+      port: 5000
+      db: MyprojectOne
+      name: slave1
+    - username: root
+      password: Chulianpzj12345
+      host: "www.dzhxka.com"
+      port: 5000
+      db: MyprojectOne
+      name: slave2
+jwt:
+  accessExp: 7
+  refreshExp: 14
+  accessSecret: msproject
+  refreshSecret: ms_project
+jaeger:
+  endpoints: "http://localhost:14268/api/traces"
